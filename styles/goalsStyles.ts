@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 20,
-    marginTop: 40, // Ajusta este valor según sea necesario para posicionar más abajo
+    marginTop: 40,
   },
   inner: {
     flex: 1,
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#000', // Asegura que el texto "Objetivos" sea negro
+    color: '#000',
   },
   subTitle: {
     fontSize: 20,
@@ -48,112 +48,6 @@ export const styles = StyleSheet.create({
     width: 50,
     height: 50,
   },
-  modalButton: {
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  modalAddButton: {
-    marginTop: 10,
-    height: 40,
-    borderRadius: 5,
-    backgroundColor: '#6200EE',
-  },
-  backButton: {
-    marginTop: 10,
-    height: 40,
-    borderRadius: 5,
-    backgroundColor: '#888',
-  },
-  modalButtonText: {
-    color: '#fff',
-    fontSize: 16,
-  },
-  addButtonText: {
-    color: '#fff',
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  modalContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,0.5)',
-  },
-  modalContent: {
-    backgroundColor: '#fff',
-    padding: 20,
-    borderRadius: 10,
-    width: '80%',
-    alignItems: 'center',
-  },
-  modalTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#000',
-    marginBottom: 20,
-  },
-  goalTypeButton: {
-    backgroundColor: '#6200EE',
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 10,
-    width: '100%',
-    alignItems: 'center',
-  },
-  goalTypeButtonText: {
-    color: '#fff',
-    fontSize: 16,
-  },
-  selectedGoalType: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#6200EE',
-    marginBottom: 10,
-  },
-  inputContainer: {
-    width: '100%',
-    alignItems: 'center',
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 10,
-    width: '100%',
-  },
-  datePickerButton: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 10,
-    width: '100%',
-    alignItems: 'center',
-  },
-  datePickerButtonText: {
-    fontSize: 16,
-    color: '#000',
-  },
-  noEndDateContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 10,
-  },
-  noEndDateText: {
-    marginLeft: 10,
-    fontSize: 16,
-    color: '#000',
-  },
-  closeButton: {
-    marginTop: 20,
-    alignItems: 'center',
-  },
-  closeButtonText: {
-    color: '#6200EE',
-    fontSize: 16,
-  },
   goalContainer: {
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -162,6 +56,12 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
     marginVertical: 5,
+    backgroundColor: '#F9F4E2', // Fondo suave similar a la card
+    borderRadius: 15, // Bordes redondeados
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 2, // Sombra en Android
   },
   goalText: {
     fontSize: 18,
@@ -179,18 +79,24 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   markButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#64da58',
     padding: 10,
     borderRadius: 5,
     marginBottom: 5,
-    marginRight: 10, // Añadimos margen derecho para separar los botones
+    marginRight: 10,
   },
   markButtonFail: {
-    backgroundColor: '#F44336', // Color rojo para el botón "✗"
+    backgroundColor: '#db615c',
   },
   markButtonText: {
     color: '#fff',
     fontSize: 16,
+  },
+  resetButton: {
+    backgroundColor: '#FFEB3B',  // Amarillo suave para reiniciar la racha
+    padding: 10,
+    borderRadius: 5,
+    marginLeft: 10,  // Para separar los botones
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -206,6 +112,124 @@ export const styles = StyleSheet.create({
   },
   toggleCompletedButtonText: {
     color: '#fff',
+    fontSize: 16,
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  cardContainer: {
+    backgroundColor: '#fff',
+    padding: 20,
+    borderRadius: 15,
+    width: '80%',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    elevation: 5,
+  },
+  closeButton: {
+    position: 'absolute',
+    top: 10,
+    right: 10,
+  },
+  cardContent: {
+    alignItems: 'center',
+    paddingVertical: 10,
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000',
+    marginBottom: 10,
+  },
+  // Contenedor para centrar y dimensionar todos los elementos del modal
+  modalContent: {
+    backgroundColor: '#F9F4E2',
+    padding: 20,
+    borderRadius: 15,
+    width: '90%', // Anchura fija para un diseño más uniforme
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    elevation: 5,
+  },
+  goalTypeButton: {
+    backgroundColor: '#C4D6FE',  // Botón azul pastel suave
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+    width: '100%',
+    alignItems: 'center',
+  },
+  goalTypeButtonText: {
+    color: '#000',
+    fontSize: 16,
+  },
+  inputContainer: {
+    width: '100%',
+    alignItems: 'center',
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#C4D6FE',  // Bordes azul pastel
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+    width: '100%',
+    backgroundColor: '#fff',  // Fondo blanco
+  },
+  datePickerButton: {
+    borderWidth: 1,
+    borderColor: '#C4D6FE',  // Bordes azul pastel
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+    width: '100%',
+    alignItems: 'center',
+    backgroundColor: '#fff',  // Fondo blanco
+  },
+  datePickerButtonText: {
+    fontSize: 16,
+    color: '#000',
+  },
+  noEndDateContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  noEndDateText: {
+    marginLeft: 10,
+    fontSize: 16,
+    color: '#000',
+  },
+  modalButton: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 10,
+    borderRadius: 5,
+  },
+  modalAddButton: {
+    backgroundColor: '#68de7c',  // Botón amarillo pastel
+    marginTop: 10,
+    height: 40,
+  },
+  backButton: {
+    backgroundColor: '#F9AC8C',  // Botón rojo pastel
+    marginTop: 10,
+    height: 40,
+  },
+  modalButtonText: {
+    color: '#000',  // Texto negro para contraste
+    fontSize: 16,
+  },
+  closeButtonText: {
+    color: '#6200EE',  // Morado oscuro para el botón de cerrar
     fontSize: 16,
   },
 });
