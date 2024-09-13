@@ -4,7 +4,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { styles } from '@/styles/goalsStyles';
 import { Goal } from '@/components/goals/Goal';
 import Ionicons from '@expo/vector-icons/Ionicons';
-
+//johannes
 interface GoalItemProps {
   goal: Goal;
   handleGoalCompletion: (id: number, isCompleted: boolean) => void;

@@ -14,4 +14,4 @@ export interface Goal {
   streakLost?: boolean; // Nuevo campo para indicar si la racha se ha perdido
 }
 
-  
+  //johannes

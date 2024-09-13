@@ -8,7 +8,7 @@ interface HeaderProps {
   onAddPress: () => void;
   onDeletePress: () => void;
 }
-
+//johannes
 const Header: React.FC<HeaderProps> = ({ onAddPress, onDeletePress }) => {
   return (
     <View style={styles.header}>

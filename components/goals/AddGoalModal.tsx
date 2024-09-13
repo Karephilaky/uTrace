@@ -4,7 +4,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { styles } from '@/styles/goalsStyles';
 import { Goal } from '@/components/goals/Goal'; // Importa la interfaz Goal
 import DateTimePicker from '@react-native-community/datetimepicker';
-
+//johannes
 interface AddGoalModalProps {
   visible: boolean;
   onClose: () => void;
